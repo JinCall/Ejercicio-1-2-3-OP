@@ -1,22 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import ContactoListComponent from './components/contact_list';
+import ContactoComponent from './components/contact';
 
 function App() {
+
+  const contactoEjemplo = {
+    name: " Santiago",
+    apellido: "Calleros",
+    email: "Ejempli123@gmail.com",
+    conectado: true
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ContactoComponent contacto={contactoEjemplo}></ContactoComponent>
+        <ContactoListComponent></ContactoListComponent>
       </header>
     </div>
   );
